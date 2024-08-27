@@ -37,6 +37,10 @@
  * Style Inheritence
  * - Inheritance From View to Text won't work
  * - Inheritance From Text to Text will work in React Native
+ * 
+ * 
+ * 
+ * 
  */
 
 

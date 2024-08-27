@@ -19,6 +19,20 @@
  * - alignSelf- (auto, flex-start,flex-end,center)
  * 
  * 
+ * Relative and Absolute
+ * - this layout depends on position property which defines how an element should display within it's parent container.
+ * - position: (relative,absolute)
+ * - relative (default)
+ *      * It will follow normal flow of layout
+ *      * It can offsed to top,bottom,left,right
+ *      * Importantly it willn't effect any sibling position or parent .
+ *      * It will take it's original space.
+ * - absolute 
+ *      * It will not follow normal flow of layout.
+ *      * It is laid out independently with it siblings.
+ *      * positive is determined by top,bottom,left,right which specific coordinates relative to it's parent container
+ *
+ * 
  * 
  */
 
@@ -30,10 +44,10 @@ import Box from './Box'
 export default function Laylout() {
   return (
     <View style={styles.container}>
-        <Box style={{backgroundColor: "#232412", alignSelf: "flex-start"}}>Box 1</Box>
-        <Box style={{backgroundColor: "#592412" , alignSelf: "flex-end"}}>Box 2</Box>
-        <Box style={{backgroundColor: "#256412",  alignSelf: "center"}}>Box 3</Box>
-        <Box style={{backgroundColor: "pink"}}>Box 4</Box>
+        <Box style={{backgroundColor: "#232412", top: 50, left: 50}}>Box 1</Box>
+        <Box style={{backgroundColor: "#592412" }}>Box 2</Box>
+        <Box style={{backgroundColor: "#256412"}}>Box 3</Box>
+        <Box style={{backgroundColor: "pink",position: "absolute", top: 100, left: 50}}>Box 4</Box>
         <Box style={{backgroundColor: "#fff512"}}>Box 5</Box>
         <Box style={{backgroundColor: "#254512"}}>Box 6</Box>
         <Box style={{backgroundColor: "lightblue"}}>Box 7</Box>
@@ -48,8 +62,8 @@ const styles = StyleSheet.create({
         flex: 1,
         borderColor: "red",
         borderWidth: 10,
-        flexDirection: "column",
-        justifyContent: "space-around",
-        // alignItems: "center"
+        // flexDirection: "column",
+        // justifyContent: "space-around",
+        alignItems: "flex-start"
     }
 })

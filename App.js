@@ -11,6 +11,7 @@ import APIHandling from './components/APIHandling';
 import Navigation from './components/Navigation/Stack';
 import Drawer from './components/Navigation/Drawer';
 import Tab from './components/Navigation/Tab';
+import DynamicUI from './components/DynamicUI';
 
 export default function App() {
   return (
@@ -19,16 +20,17 @@ export default function App() {
       <StatusBar style="auto" /> */}
       {/* <CoreComponents /> */}
       {/* <Greet name="Anjii" />
-      <Greet name="Pottii" />
-      <Styling /> */}
+      <Greet name="Pottii" /> */}
+      {/* <Styling /> */}
       {/* <Laylout /> */}
+      <DynamicUI />
       {/* <List ></List> */}
       {/* <Inputs /> */}
       {/* <LoginForm /> */}
       {/* <APIHandling /> */}
       {/* <Navigation /> */}
       {/* <Drawer /> */}
-      <Tab />
+      {/* <Tab /> */}
     </View>
   );
 }
